@@ -9,6 +9,6 @@ rename column EmailAddress to StudentEmail;
 
 #This command will create a new column in the enrollments table called "GradYear"
 /*
-alter table enrollments
+alter table Enrollments
 add GradYear date;
 */
