@@ -42,9 +42,10 @@ where EnrollmentID in (13, 14, 15);
 #To find the course end date,
 #I will use a join to get the values of the CourseDuration(Courses) and StartDate(Enrollments),
 #add these using the date_add function, and set this as the value for EndDate
-
+/*
 update Enrollments e
 join courses c on e.CourseID = c.CourseID
 set e.EndDate = date_add(e.StartDate, interval c.CourseDuration month)
 where e.EndDate is null
 and e.FinalGrade is not null;
+*/
