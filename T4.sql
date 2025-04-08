@@ -4,20 +4,23 @@ use Student_Access_Database;
 #This command creates a new procedure, 
 #using a join to collect data from two tables,
 #count to find amount of students enrolled in a specific course,
-#and group to order the columns 
+#group to group the columns,
+#order to bring the most popular course to the top,
+#and limit to only show the most popular course
 delimiter //
-create procedure if not exists University_Student_Count()
+create procedure if not exists MostPopularCourse()
 begin
 
-Select U.UniversityName, P.UniversityCourse, Count(p.studentID) AS StudentAmount
+select U.UniversityName, P.UniversityCourse, Count(P.studentID) AS StudentAmount
 from Universities U
 inner join Progression P
 on U.UniversityID = P.UniversityID
-group by U.UniversityName, P.UniversityCourse;
+group by U.UniversityName, P.UniversityCourse
+order by StudentAmount desc
+limit 1;
 
-end
-//
-delimiter ;
+end //
+delimiter ; 
 
 #This command executes the procedure
-call University_Student_Count();
+call MostPopularCourse();
