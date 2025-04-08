@@ -70,8 +70,7 @@ values
 
 #This query populates the Progression table
 #Only 5 students in the sample have picked a university course,
-#so instead of adding all students with null values,
-#i just added the students who are going to university
+#to prepare for task 4, I added a few more
 insert into Progression 
 (StudentID, UniversityID, UniversityCourse, StartDate)
 values
@@ -79,5 +78,8 @@ values
 ('1002', '2', 'Software Engineering', '2024-09-15'),
 ('1005', '2', 'Accounting', '2024-09-15'),
 ('1007', '1', 'Sociology', '2024-09-15'),
-('1011', '1', 'Psychology', '2024-09-15')
+('1011', '1', 'Psychology', '2024-09-15'),
+('1004','1','Biomedical Engineering','2024-09-15'),
+('1008','1','Biomedical Engineering','2024-09-15'),
+('1003','2','Software Engineering','2024-09-15')
 ;
