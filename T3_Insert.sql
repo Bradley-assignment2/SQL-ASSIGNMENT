@@ -2,7 +2,6 @@
 use student_access_database;
 
 #This command will add 5 new students into the Students table
-/*
 insert into Students 
 (FirstName, LastName, DOB, StudentEmail, PhoneNumber)
 values
@@ -12,11 +11,9 @@ values
 ("Joyce","Moses","1993-12-22","jmoses@yahoo.com","+443820098734"),
 ("David","Brock","1999-04-16","dbrock@gmail.com","+440930212936")
 ;
-*/
 
 #This command will add enrollment data for the new students,
 #this is neccessary for T3_Update
-/*
 insert into enrollments
 (StudentID, CourseID, EnrollmentDate, StartDate, EndDate, CompletionDate)
 values
@@ -26,4 +23,3 @@ values
 ("1016", "PSY108", "2024-09-01", "2024-09-01", "2025-06-28", "2025-06-30"),
 ("1017", "MAT109", "2024-09-01", "2024-09-01", "2025-06-21", "2025-06-30")
 ;
-*/

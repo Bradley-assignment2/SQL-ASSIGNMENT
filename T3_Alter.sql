@@ -2,13 +2,9 @@
 use student_access_database;
 
 #This command will rename the column "EmailAddress" to "StudentEmail"
-/*
 alter table Students
 rename column EmailAddress to StudentEmail;
-*/
 
 #This command will create a new column in the enrollments table called "GradYear"
-/*
 alter table Enrollments
 add GradYear date;
-*/
